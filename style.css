@@ -58,17 +58,46 @@ button:active {
   min-height: 100svh;
 }
 
+/* ── МОБІЛЬНИЙ (телефон) ── */
 @media (max-width: 520px) {
   .screen.active {
     align-items: stretch;
     height: 100svh;
     min-height: 100svh;
+    overflow: hidden;
   }
 
-  #game-screen .game-wrapper {
+  #menu-screen .game-wrapper,
+  #game-screen .game-wrapper,
+  #result-screen .game-wrapper {
     height: 100svh !important;
-    max-height: 100svh;
+    min-height: 100svh !important;
+    max-height: 100svh !important;
     border-radius: 0;
+    flex: 1;
+  }
+}
+
+/* ── ДЕСКТОП — мобільний розмір по центру ── */
+@media (min-width: 521px) {
+  .screen.active {
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    background: transparent;
+  }
+
+  #menu-screen .game-wrapper,
+  #game-screen .game-wrapper,
+  #result-screen .game-wrapper {
+    width: 390px !important;
+    max-width: 390px !important;
+    height: min(844px, 95svh) !important;
+    max-height: min(844px, 95svh) !important;
+    min-height: unset !important;
+    border-radius: 28px;
+    overflow: hidden;
+    flex-shrink: 0;
   }
 }
 
