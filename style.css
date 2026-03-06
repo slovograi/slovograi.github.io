@@ -63,6 +63,13 @@ button:active {
   padding-top: 33px;
 }
 
+.site-nav ~ .app #game-screen.screen.active,
+.site-nav ~ .app #menu-screen.screen.active,
+.site-nav ~ .app #result-screen.screen.active {
+  padding-top: 0;
+  min-height: 100svh;
+}
+
 .coin-fly {
   position: fixed;
   left: 0;
