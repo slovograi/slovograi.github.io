@@ -58,6 +58,20 @@ button:active {
   min-height: 100svh;
 }
 
+@media (max-width: 520px) {
+  .screen.active {
+    align-items: stretch;
+    height: 100svh;
+    min-height: 100svh;
+  }
+
+  #game-screen .game-wrapper {
+    height: 100svh !important;
+    max-height: 100svh;
+    border-radius: 0;
+  }
+}
+
 .site-nav ~ .app .screen.active {
   min-height: calc(100svh - 33px);
   padding-top: 33px;
