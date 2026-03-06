@@ -58,6 +58,11 @@ button:active {
   min-height: 100svh;
 }
 
+.site-nav ~ .app .screen.active {
+  min-height: calc(100svh - 33px);
+  padding-top: 33px;
+}
+
 .coin-fly {
   position: fixed;
   left: 0;
