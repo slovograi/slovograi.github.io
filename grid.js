@@ -12,16 +12,17 @@ export async function createGrid() {
   gridEl.innerHTML = '';
   const cols = level.cols;
 
-  const parent = gridEl.parentElement;
+  const parent = gridEl.parentElement; // .game-card
 
   // Чекаємо реальний розмір після render
   await new Promise(r => requestAnimationFrame(r));
   await new Promise(r => requestAnimationFrame(r));
 
-  const availW = parent.clientWidth  || window.innerWidth;
-  const availH = parent.clientHeight || (window.innerHeight * 0.5);
+  // Беремо розмір безпосередньо від game-card
+  const availW = parent.clientWidth;
+  const availH = parent.clientHeight;
 
-  const padding = 8;
+  const padding = 4;
   const size = Math.min(availW, availH) - padding * 2;
 
   const cellSize = Math.floor(size / cols);
