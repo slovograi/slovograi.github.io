@@ -54,7 +54,7 @@ button:active {
 .screen.active {
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   min-height: 100svh;
 }
 
