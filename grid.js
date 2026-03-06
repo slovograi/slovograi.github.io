@@ -1,6 +1,7 @@
 import { level } from './level.js';
 
-export function createGrid() {
+export async function createGrid() {
+
   const gridEl = document.getElementById('grid');
   if (!gridEl) return;
 
@@ -13,12 +14,18 @@ export function createGrid() {
 
   const parent = gridEl.parentElement;
 
-  const size = Math.min(
-    parent.clientWidth,
-    parent.clientHeight
-  );
+  // Чекаємо реальний розмір після render
+  await new Promise(r => requestAnimationFrame(r));
+  await new Promise(r => requestAnimationFrame(r));
+
+  const availW = parent.clientWidth  || window.innerWidth;
+  const availH = parent.clientHeight || (window.innerHeight * 0.5);
+
+  const padding = 8;
+  const size = Math.min(availW, availH) - padding * 2;
 
   const cellSize = Math.floor(size / cols);
+
 
 
   gridEl.style.gridTemplateColumns = `repeat(${cols}, ${cellSize}px)`;
