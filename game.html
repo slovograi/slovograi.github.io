@@ -15,12 +15,19 @@
    <link rel="stylesheet" href="./style.css">
    <style>
      html { overflow: hidden; }
-     body { overflow: hidden; }
+     body {
+       overflow: hidden;
+       background: #f5ede0;
+       background-image:
+         radial-gradient(ellipse 60% 50% at 20% 80%, rgba(192,132,90,.18) 0%, transparent 70%),
+         radial-gradient(ellipse 50% 40% at 80% 20%, rgba(122,92,58,.12) 0%, transparent 70%);
+       background-attachment: fixed;
+     }
    </style>
 </head>
 <body>
 
-<a href="https://slovograi.github.io/" style="position:fixed;bottom:8px;right:8px;z-index:9999;background:rgba(253,246,236,0.85);color:#7a5c3a;text-decoration:none;font-size:11px;padding:3px 10px;border-radius:20px;border:1px solid #d9c4a8;backdrop-filter:blur(4px);opacity:0.7;">← На сайт</a>
+<a href="https://slovograi.github.io/" onclick="event.preventDefault(); window.location.replace('https://slovograi.github.io/');" style="position:fixed;bottom:8px;right:8px;z-index:9999;background:rgba(253,246,236,0.85);color:#7a5c3a;text-decoration:none;font-size:11px;padding:3px 10px;border-radius:20px;border:1px solid #d9c4a8;backdrop-filter:blur(4px);opacity:0.7;">← На сайт</a>
 <main class="app" aria-label="СЛОВОСВІТ — гра з пошуку слів">
 
 <section id="menu-screen" class="screen active" aria-label="Головне меню">
